@@ -1,0 +1,13 @@
+gradio
+langchain
+unstructured
+openai
+pybind11
+chromadb
+Cython
+unstructured[local-inference]
+layoutparser[layoutmodels,tesseract]
+pytesseract
+Pillow==9.0.0
+tiktoken
+pyopenssl
