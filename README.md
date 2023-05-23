@@ -10,7 +10,7 @@ Steps to deploy in GCP:
 6. Build an image using Dockerfile by running the following command from the directory containing quickstart.sh and Dockerfile: `gcloud builds submit --region=us-west2 --tag us-west2-docker.pkg.dev/project-id/asom-barta/asom-barta-image:tag1`.
 
 You will see something like this at the end:
-'''
+```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ID: 588a0cf7-b115-4fe1-b235-7b30683da64d
 CREATE_TIME: 2023-05-23T07:07:59+00:00
@@ -18,7 +18,7 @@ DURATION: 30M8S
 SOURCE: gs://asom-barta-qna-bot_cloudbuild/source/1684825675.528156-1ca5dee0f1b14f0bafd8aba66e340da9.tgz
 IMAGES: us-west2-docker.pkg.dev/asom-barta-qna-bot/asom-barta/asom-barta-image:tag1
 STATUS: SUCCESS
-'''
+```
 8. Configure Docker to use your Artifact Registry credentials when interacting with Artifact Registry. (You are only required to do this once.) Use the following command to authenticate using the gcloud credential helper: `gcloud auth configure-docker HOSTNAME-LIST`
 
 In our case, `gcloud auth configure-docker us-west2-docker.pkg.dev`
